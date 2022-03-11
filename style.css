@@ -458,3 +458,15 @@ a:hover{
         flex-direction: column;
     }
 }
+.createdby{
+    align-items: center;
+    justify-content: center;
+    padding-left: auto;
+    padding-right: auto;
+    
+}
+.createdby p{
+    padding-top:30px;
+    text-align:center;
+    color: #777;
+}
