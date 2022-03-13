@@ -305,6 +305,7 @@ nav ul li:hover::after{
     padding-left: 100px;
     padding-right: 100px;
     line-height: 5rem;
+    color:#777;
 
 }
 .pattern
@@ -371,13 +372,14 @@ nav ul li:hover::after{
     text-align: center;
 }
 .contact .content h2{
-    font-size: 36px;
+    font-size: 55px;
     font-weight: 500;
     color: #009688;
     padding: 10px;
 }
 .contact .content p{
     font-weight: 300;
+    font-size: 22px;
     color:#777;
 }
 .container3{
