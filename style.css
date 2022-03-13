@@ -7,7 +7,14 @@
 body,html{
     scroll-behavior: smooth;
 }
-
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
 .banner{
     width: 100%;
     height:100vh;
@@ -15,31 +22,47 @@ body,html{
     background-size: cover;
     background-position: center;
 }
-.navbar{
+nav{
     width: 85%;
     margin: auto;
-    padding: 35px 0;
+    padding: 25px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: height .5s ease;
+}
+.scrolling-active{
+    background-color: #E7F7F7;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+.scrolling-active nav a{
+    color: #777;
+}
+.scrolling-active nav h1{
+    color:#777;
 }
 .logo{
     color: #fff;
-    width: 450px;
+    width: 350px;
     cursor:pointer;
 }
-.navbar ul li{
+nav ul
+{
+    display: flex;
     list-style: none;
-    display: inline-block;
+}
+nav ul li{
+    list-style: none;
     margin:  0 20px;
     position: relative;
 }
-.navbar ul li a{
+nav ul li a{
     text-decoration: none;
     color:#E7F7F7;
     text-transform: uppercase;
+    
 }
-.navbar ul li::after{
+nav ul li::after{
     content: '';
     height: 3px;
     width: 0;
@@ -49,8 +72,12 @@ body,html{
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li:hover::after{
+nav ul li:hover::after{
     width:100%;
+}
+@media (max-width:450px)
+{
+    
 }
 .Titles{
     width:100%;
@@ -322,7 +349,7 @@ body,html{
     border-radius: 50%;
     transition: .5s;
 }
-a:hover{
+.wrapper a:hover{
     color: #292929;
     border: 1px solid #292929;
     transition: .5s;
@@ -471,3 +498,21 @@ a:hover{
     
     color: #777;
 }
+.services, .about, .contact{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size: 30px;
+    float:right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+
+

@@ -8,16 +8,21 @@
 </head>
 <body>
     <div class="banner" id="home">
-        <div class="navbar">
-            <h1 class="logo">Filip Tomín | Web Developer</h1>
-            <ul>
-                <li><a href="#home">Úvod</a></li>
-                <li><a href="#services">Služby</a></li>
-                <li><a href="#about">O mně</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-            
-        </div>
+        <header>
+            <nav>                
+                
+                <h1 class="logo">Filip Tomín | Web Developer</h1>
+                <ul class="links">
+                    <li><a href="#home">Úvod</a></li>
+                    <li><a href="#services">Služby</a></li>
+                    <li><a href="#about">O mně</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                
+                
+            </nav>
+        </header>
+        
         <div class="Titles">
             <h1>Filip Tomín</h1>
             <div class="typingIntro ">
@@ -51,7 +56,7 @@
                         </div>
                         <h3>Webové stránky</h3>
                         <p>Jednou z vašich prvních vizitek, které vytváří názor zákazníka na vás, je i váš internetový vzhled. Nabízím vám tvorbu webových stránek, které mají moderní nádech a jsou přizpůsobené i na mobilní zařízení</p>
-                        <a href="#">Kontaktuj mě</a>
+                        <a href="#contact">Kontaktuj mě</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +68,7 @@
                         </div>
                         <h3>Úpravy webů</h3>
                         <p>Pokud už své webovky máte ale s něčím na nich nejste spokojení a sami nevíte, co s tím, tak mě neváhejte kontaktovat. Rád vám pomůžu, jak s jednorázovými úpravami webů, tak s dlouhodobou správou webu.</p>
-                        <a href="#">Kontaktuj mě</a>
+                        <a href="#contact">Kontaktuj mě</a>
                     </div>
                 </div>
             </div>
@@ -75,19 +80,20 @@
                         </div>
                         <h3>Konzultace</h3>
                         <p>Pokud jsi frontend developer a nevíš si rady s nějakým problémem, tak mě neváhej kontaktovat a poprosit o pomoc. Rád vám také pomůžu s instalací softwaru nebo s výběrem hardwaru.</p>
-                        <a href="#">Kontaktuj mě</a>
+                        <a href="#contact">Kontaktuj mě</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
         
-        <div class="pattern">
-            <div class="sectionName">
-                <h1>O mně</h1>
+        
+        <section class="about">
+            <div class="pattern" id="about">
+                <div class="sectionName">
+                    <h1>O mně</h1>
+                </div>
             </div>
-        </div>
-        <section class="about" id="about">
             <div class="container2">
                 <h1 class="MyName">Filip Tomín</h1>
                 <h2 class="WebDev">Web Developer</h2>
@@ -184,4 +190,11 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.addEventListener('scroll', function(){
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+    </script>
 </body>
